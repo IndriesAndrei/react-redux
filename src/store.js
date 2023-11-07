@@ -1,14 +1,14 @@
-// Redux simple without React
-import { applyMiddleware, combineReducers, createStore } from "redux";
+// Redux toolkit
+import { configureStore } from "@reduxjs/toolkit";
 import accountReducer from "./features/accounts/accountSlice";
 import customerReducer from "./features/customers/customerSlice";
-import thunk from "redux-thunk";
 
-// creating the Redux store
-const rootReducer = combineReducers({
-    account: accountReducer,
-    customer: customerReducer,
-});
-const store = createStore(rootReducer, applyMiddleware(thunk));
+// the store in React Toolkit
+const store = configureStore({
+    reducer: {
+        account: accountReducer,
+        customer: customerReducer,
+    }
+})
 
 export default store;
