@@ -45,7 +45,7 @@ function AccountOperations() {
           <input
             type="number"
             value={depositAmount}
-            onChange={(e) => setDepositAmount(+e.target.value)}
+            onChange={(e) => setDepositAmount(e.target.value)}
           />
           <select
             value={currency}
